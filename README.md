@@ -158,6 +158,8 @@ This project is intentionally permissive and open.
 Maintained by **Swef**.  
 Initial implementation generated with the assistance of AI and refined manually.
 
+---
+
 ## 🛠 Updates
 
 v0.1.2 - 2025/12/30 | Separators added to separate states icons
