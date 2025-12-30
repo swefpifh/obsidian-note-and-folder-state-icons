@@ -1,11 +1,12 @@
 {
-    "id": "templater-obsidian",
-    "name": "Templater",
-    "version": "2.16.4",
-    "description": "Create and use templates",
-    "minAppVersion": "1.5.0",
-    "author": "SilentVoid",
-    "authorUrl": "https://github.com/SilentVoid13",
-    "helpUrl": "https://silentvoid13.github.io/Templater/",
-    "isDesktopOnly": false
+  "id": "obsidian-note-state-icons",
+  "name": "Note State Icons",
+  "version": "0.1.0",
+  "minAppVersion": "1.0.0",
+  "description": "Add an icon status to the left of the note title via a context menu available by right-clicking with the mouse.",
+  "author": "swefpifh",
+  "authorUrl": "",
+  "isDesktopOnly": true,
+  "main": "main.js",
+  "repo": "swefpifh/obsidian-note-state-icons"
 }
