@@ -160,8 +160,8 @@ Initial implementation generated with the assistance of AI and refined manually.
 
 ## 🛠 Updates
 
-v0.1.1 - 2025/12/30
-| French and English supported
+v0.1.2 - 2025/12/30 | Separators added to separate status icons
 
-v0.1.0 - 2025/12/29
-| State system for note title
+v0.1.1 - 2025/12/30 | French and English supported
+
+v0.1.0 - 2025/12/29 | State system for note title
