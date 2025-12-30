@@ -86,9 +86,8 @@ The list can be freely modified or extended by editing the plugin source.
 
 ## 🌍 Language
 
-The plugin currently uses **static English labels**.
-
-It does **not** automatically adapt to Obsidian’s interface language at this time.
+- 🇬🇧 English
+- 🇫🇷 Français
 
 ---
 
