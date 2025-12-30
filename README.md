@@ -1,1 +1,160 @@
-# obsidian-note-state-icons
+# Obsidian Note State Icons
+
+**Obsidian Note State Icons** is an open-source plugin for Obsidian that lets you assign a **visual state** to notes using **icons displayed directly in the File Explorer**.
+
+The purpose of this plugin is to provide **clear, immediate visual feedback** about the role, category, or status of a note — without modifying the note content itself.
+
+---
+
+## ✨ Features
+
+- Assign an **icon-based state** to any Markdown note
+- Icons are displayed **only in the File Explorer**
+- No tags, no frontmatter, no text injection inside notes
+- States are **persistent** across Obsidian restarts
+- Works efficiently with large vaults
+- Lightweight and unobtrusive
+- Fully desktop-focused UI behavior
+
+---
+
+## 🧠 How It Works
+
+1. Right-click a note in the File Explorer
+2. Open the **State** menu
+3. Select a state from the list
+4. The selected icon appears **next to the note title**
+
+To remove a state, choose **None**.
+
+All states are stored internally and restored automatically when Obsidian is restarted.
+
+<p align="center">
+  <img src="https://i.imgur.com/n0zBb7j.png" alt="How it works" width="600">
+</p>
+
+---
+
+## 🗂 Available States (default)
+
+States are currently defined directly in the plugin code.  
+Each state includes:
+- an icon
+- a label
+- a color (currently uniform)
+
+Examples of available states include:
+
+### Validation & Status
+- ✔ Validated  
+- ❌ Refused  
+- ⚠️ Warning  
+- 🚧 In Progress  
+- 👁 Review  
+- 🚩 Red Flag  
+
+### Books & Documents
+- 📚 Piles of books  
+- 📔 Notebook  
+- 📕 Red Book  
+- 📙 Orange Book  
+- 📗 Green Book  
+- 📘 Blue Book  
+
+### Visual Markers
+- 🟥 Red Square  
+- 🟧 Orange Square  
+- 🟨 Yellow Square  
+- 🟩 Green Square  
+- 🟦 Blue Square  
+- 🟪 Purple Square  
+- ⬛ Black Square  
+
+### Miscellaneous
+- ❄️ Frozen  
+- 🔥 Hot  
+- 💥 Explode  
+- ❤️ Love  
+- 💡 Light  
+- 🌐 Globe  
+- 🔅 Sun  
+- ⭐ Star  
+
+The list can be freely modified or extended by editing the plugin source.
+
+---
+
+## 🌍 Language
+
+The plugin currently uses **static English labels**.
+
+It does **not** automatically adapt to Obsidian’s interface language at this time.
+
+---
+
+## 🖥 Compatibility
+
+| Platform | Supported |
+|--------|-----------|
+| Windows | ✅ |
+| macOS | ✅ |
+| Linux | ✅ |
+| Android | ❌ |
+| iOS | ❌ |
+
+This plugin is **desktop-only**.
+
+### Why desktop-only?
+It relies on the desktop File Explorer UI and context menu system, which are not available on Obsidian Mobile.
+
+---
+
+## 🔒 Data & Privacy
+
+- No network access
+- No telemetry
+- No external services
+- All data is stored locally in Obsidian’s plugin data store
+
+---
+
+## 📦 Installation
+
+### Manual Installation
+
+1. Download or clone this repository
+2. Copy the folder into: `<YourVault>/.obsidian/plugins/obsidian-note-state-icons`
+3. Restart Obsidian
+4. Enable **Obsidian Note State Icons** in `Settings → Community plugins`
+
+---
+
+## 🛠 Development
+
+- Written in JavaScript
+- Uses Obsidian’s official Plugin API
+- Injects icons into the File Explorer DOM
+- Designed to be simple, readable, and easily customizable
+
+---
+
+## 📜 License
+
+This project is released under the **MIT License**.
+
+You are free to use, modify, redistribute, or integrate it into other projects.
+
+---
+
+## 🤝 Contributing
+
+Contributions, forks, and improvements are welcome.
+
+This project is intentionally permissive and open.
+
+---
+
+## ✍️ Author
+
+Maintained by **Swef**.  
+Initial implementation generated with the assistance of AI and refined manually.
