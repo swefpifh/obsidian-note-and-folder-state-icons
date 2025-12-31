@@ -41,7 +41,7 @@ module.exports = class SwefNoteStateIconsPlugin extends Plugin {
 	  "vampire":      { icon: "🧛", color: "#000000", labelKey: "state.vampire" },
 	  "fairy":        { icon: "🧚", color: "#000000", labelKey: "state.fairy" },
 	  "magician":     { icon: "🧙", color: "#000000", labelKey: "state.magician" },
-	  "zombie":       { icon: "🧟‍♀️", color: "#000000", labelKey: "state.zombie" },
+	  "zombie":       { icon: "🧟️", color: "#000000", labelKey: "state.zombie" },
       
 	  // --- Group 5 : Misc ---
       "frozen":       { icon: "❄️", color: "#000000", labelKey: "state.frozen" },
