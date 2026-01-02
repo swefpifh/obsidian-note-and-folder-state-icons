@@ -3,7 +3,7 @@ const { Plugin, TFolder } = require("obsidian");
 module.exports = class SwefNoteStateIconsPlugin extends Plugin {
 
   async onload() {
-    console.log("SWEF NOTE STATE ICONS LOADED");
+    console.log("Note State Icons Loaded");
 
     // ===== I18N =====
     await this.loadI18n();
@@ -35,15 +35,16 @@ module.exports = class SwefNoteStateIconsPlugin extends Plugin {
       "squarepurple": { icon: "🟪", color: "#000000", labelKey: "state.squarepurple" },
       "squareblack":  { icon: "⬛", color: "#000000", labelKey: "state.squareblack" },
 
-	  // --- Group 4 : Species ---
-	  "elf":       	  { icon: "🧝", color: "#000000", labelKey: "state.elf" },
-	  "djinn":        { icon: "🧞", color: "#000000", labelKey: "state.djinn" },
-	  "vampire":      { icon: "🧛", color: "#000000", labelKey: "state.vampire" },
-	  "fairy":        { icon: "🧚", color: "#000000", labelKey: "state.fairy" },
-	  "magician":     { icon: "🧙", color: "#000000", labelKey: "state.magician" },
-	  "zombie":       { icon: "🧟️", color: "#000000", labelKey: "state.zombie" },
-      
-	  // --- Group 5 : Misc ---
+      // --- Group 4 : Species ---
+      "human":  	  { icon: "🙍", color: "#000000", labelKey: "state.human" },
+      "elf":          { icon: "🧝", color: "#000000", labelKey: "state.elf" },
+      "djinn":        { icon: "🧞", color: "#000000", labelKey: "state.djinn" },
+      "vampire":      { icon: "🧛", color: "#000000", labelKey: "state.vampire" },
+      "fairy":        { icon: "🧚", color: "#000000", labelKey: "state.fairy" },
+      "magician":     { icon: "🧙", color: "#000000", labelKey: "state.magician" },
+      "zombie":       { icon: "🧟️", color: "#000000", labelKey: "state.zombie" },
+
+      // --- Group 5 : Misc ---
       "frozen":       { icon: "❄️", color: "#000000", labelKey: "state.frozen" },
       "hot":          { icon: "🔥", color: "#000000", labelKey: "state.hot" },
       "explode":      { icon: "💥", color: "#000000", labelKey: "state.explode" },
@@ -53,13 +54,13 @@ module.exports = class SwefNoteStateIconsPlugin extends Plugin {
       "light":        { icon: "💡", color: "#000000", labelKey: "state.light" },
       "2swords":      { icon: "⚔️", color: "#000000", labelKey: "state.2swords" },
       "globe":        { icon: "🌐", color: "#000000", labelKey: "state.globe" },
-      "sun":          { icon: "🔅", color: "#000000", labelKey: "state.sun" },
+      "sun":          { icon: "☀️", color: "#000000", labelKey: "state.sun" },
       "star":         { icon: "⭐", color: "#000000", labelKey: "state.star" }
     };
 
     this.stateMap = (await this.loadData()) || {};
 
-    // ===== CONTEXT MENU (NOTES + DOSSIERS) =====
+    // ===== CONTEXT MENU =====
     this.registerEvent(
       this.app.workspace.on("file-menu", (menu, file) => {
         if (!file) return;
@@ -74,6 +75,7 @@ module.exports = class SwefNoteStateIconsPlugin extends Plugin {
 
         const stateMenu = menu.items.at(-1).submenu;
 
+        // NONE
         stateMenu.addItem(sub => {
           sub
             .setTitle(this.t("menu.none"))
@@ -87,30 +89,63 @@ module.exports = class SwefNoteStateIconsPlugin extends Plugin {
 
         stateMenu.addSeparator();
 
-        const groups = [
+        // ===== DIRECT STATES (GROUP 1,2,3) =====
+        [
           ["validated","refused","warning","in-progress","review","redflag"],
           ["bookpiles","notebook","bookred","bookorange","bookgreen","bookblue"],
-          ["squarered","squareorange","squareyellow","squaregreen","squareblue","squarepurple","squareblack"],
-		  ["elf","djinn","vampire","fairy","magician","zombie"],
-          ["frozen","hot","explode","love","arrow","medal","light","2swords","globe","sun","star"]
-        ];
-
-        groups.forEach((group, i) => {
+          ["squarered","squareorange","squareyellow","squaregreen","squareblue","squarepurple","squareblack"]
+        ].forEach((group, i) => {
           if (i > 0) stateMenu.addSeparator();
 
-          group.forEach(stateId => {
-            const state = this.states[stateId];
-            if (!state) return;
-
+          group.forEach(id => {
+            const s = this.states[id];
             stateMenu.addItem(sub => {
               sub
-                .setTitle(`${state.icon} ${this.t(state.labelKey)}`)
+                .setTitle(`${s.icon} ${this.t(s.labelKey)}`)
                 .onClick(async () => {
-                  this.stateMap[file.path] = stateId;
+                  this.stateMap[file.path] = id;
                   await this.saveData(this.stateMap);
                   this.triggerFullRefresh();
                 });
             });
+          });
+        });
+
+        // ===== SUBMENU MISC =====
+        stateMenu.addSeparator();
+        stateMenu.addItem(item => {
+          item.setTitle(this.t("menu.misc")).setIcon("layers").setSubmenu();
+        });
+
+        const miscMenu = stateMenu.items.at(-1).submenu;
+
+        // Species
+        ["human","elf","djinn","vampire","fairy","magician","zombie"].forEach(id => {
+          const s = this.states[id];
+          miscMenu.addItem(sub => {
+            sub
+              .setTitle(`${s.icon} ${this.t(s.labelKey)}`)
+              .onClick(async () => {
+                this.stateMap[file.path] = id;
+                await this.saveData(this.stateMap);
+                this.triggerFullRefresh();
+              });
+          });
+        });
+
+        miscMenu.addSeparator();
+
+        // Misc
+        ["frozen","hot","explode","love","arrow","medal","light","2swords","globe","sun","star"].forEach(id => {
+          const s = this.states[id];
+          miscMenu.addItem(sub => {
+            sub
+              .setTitle(`${s.icon} ${this.t(s.labelKey)}`)
+              .onClick(async () => {
+                this.stateMap[file.path] = id;
+                await this.saveData(this.stateMap);
+                this.triggerFullRefresh();
+              });
           });
         });
       })
@@ -200,6 +235,6 @@ module.exports = class SwefNoteStateIconsPlugin extends Plugin {
   }
 
   onunload() {
-    console.log("SWEF NOTE STATE ICONS UNLOADED");
+    console.log("Note State Icons Unloaded");
   }
 };

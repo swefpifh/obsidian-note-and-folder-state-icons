@@ -2,6 +2,12 @@
   "menu.state": "State",
   "menu.none": "None",
 
+  "category.status": "Status",
+  "category.books": "Books",
+  "category.squares": "Squares",
+  "category.species": "Species",
+  "category.misc": "Misc",
+  
   "state.validated": "Validated",
   "state.refused": "Refused",
   "state.warning": "Warning",
@@ -24,6 +30,9 @@
   "state.squarepurple": "Purple Square",
   "state.squareblack": "Black Square",
   
+  "menu.misc": "Misc",
+  
+  "state.human": "Human",
   "state.elf": "Elf",
   "state.djinn": "Djinn",
   "state.vampire": "Vampire",

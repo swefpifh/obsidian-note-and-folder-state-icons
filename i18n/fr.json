@@ -1,6 +1,12 @@
 {
   "menu.state": "État",
   "menu.none": "Aucun",
+  
+  "category.status": "Statut",
+  "category.books": "Livres",
+  "category.squares": "Carrés",
+  "category.species": "Espèces",
+  "category.misc": "Divers",
 
   "state.validated": "Validé",
   "state.refused": "Refusé",
@@ -24,6 +30,9 @@
   "state.squarepurple": "Carré violet",
   "state.squareblack": "Carré noir",
   
+  "menu.misc": "Autres",
+  
+  "state.human": "Humain",
   "state.elf": "Elfe",
   "state.djinn": "Djinn",
   "state.vampire": "Vampire",
