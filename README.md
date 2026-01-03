@@ -69,6 +69,7 @@ Examples of available states include:
 - ⬛ Black Square  
 
 ### Species
+- 🙍 Human
 - 🧝 Elf
 - 🧞 Djinn
 - 🧛 Vampire
