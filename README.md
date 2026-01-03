@@ -20,10 +20,9 @@ The purpose of this plugin is to provide **clear, immediate visual feedback** ab
 
 ## 🧠 How It Works
 
-1. Right-click a note in the File Explorer
-2. Open the **State** menu
-3. Select a state from the list
-4. The selected icon appears **next to the note title**
+1. Right-click a note or a folder in the File Explorer
+2. In the **State** menu, select a icon from the list
+4. The selected icon appears **next to the note/folder title**
 
 To remove a state, choose **None**.
 
