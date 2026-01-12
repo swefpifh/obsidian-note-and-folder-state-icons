@@ -138,7 +138,7 @@ It relies on the desktop File Explorer and context menu system, which are not av
 
 1. Download or clone this repository
 2. Copy the folder into:  
-   `<YourVault>/.obsidian/plugins/obsidian-note-state-icons`
+   `<YourVault>/.obsidian/plugins/obsidian-note-folder-state-icons`
 3. Restart Obsidian
 4. Enable **Note & Folder State Icons** in  
    `Settings → Community plugins`
