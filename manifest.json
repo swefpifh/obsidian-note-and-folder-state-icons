@@ -6,6 +6,5 @@
   "description": "Add a state icon to the left of a note's or folder's title.",
   "author": "swefpifh",
   "authorUrl": "https://github.com/swefpifh",
-  "isDesktopOnly": true,
-  "main": "main.js"
+  "isDesktopOnly": true
 }
