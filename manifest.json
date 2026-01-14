@@ -1,5 +1,5 @@
 {
-  "id": "obsidian-note-state-icons",
+  "id": "note-and-folder-state-icons",
   "name": "Note & Folder State Icons",
   "version": "0.1.5",
   "minAppVersion": "1.0.0",
@@ -8,5 +8,5 @@
   "authorUrl": "",
   "isDesktopOnly": true,
   "main": "main.js",
-  "repo": "swefpifh/obsidian-note-folder-state-icons"
+  "repo": "swefpifh/obsidian-note-and-folder-state-icons"
 }
