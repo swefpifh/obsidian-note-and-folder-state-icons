@@ -7,5 +7,5 @@
   "author": "swefpifh",
   "authorUrl": "https://github.com/swefpifh",
   "isDesktopOnly": true,
-  "js": "main.js"
+  "main": "main.js"
 }
