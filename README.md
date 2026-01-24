@@ -182,6 +182,9 @@ Maintained by **swefpifh**.
 
 ## 🛠 Changelog
 
+### v0.1.6 | *2026/01/24*
+- Fixed an issue where the icon remained visible during note or folder title editing and duplicated upon confirmation.
+
 ### v0.1.5 | *2026/01/12*
 - Plugin renamed
 - [QOL] Fixed state icons refresh on plugin enable/disable (no restart required)
